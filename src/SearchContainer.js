@@ -21,18 +21,17 @@ class SearchContainer extends Component {
 
   onSubmitQuery(evt){
     evt.preventDefault();
-    let component = this;
     queryOmdb(this.state.query).then( data => {
-      component.setState({
+      this.setState({
         query: '',
         hasSearched: true,
         movies: data,
-      })
-    })
+      });
+    });
   }
 
   render() {
-    
+
     if (this.state.hasSearched){
       return (
         <Results movies={this.state.movies} />

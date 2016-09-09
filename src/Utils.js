@@ -3,29 +3,30 @@ import $ from 'jquery'
 export function queryOmdb (query) {
   var term = query.replace(/\s/, "+"); //replace white space characters with a "+"
   var url = "https://omdbapi.com?s=" + term;
-  var bechurl = "http://bechdeltest.com/api/v1/getMoviesByTitle?title=" + term
-  var bechurlAll = "http://bechdeltest.com/api/v1/getAllMovieIds"
+  var bechurl = "https://cors-anywhere.herokuapp.com/http://bechdeltest.com/api/v1/getMoviesByTitle?title=" + term
 
 
-  return $.getJSON(url).then(function(response) {
-    var imdbObjs = response["Search"]
-    console.log("Hiya: ", imdbObjs);
-    //second api call which gets the actual rating
-    //another .then
-  // return $.getJSON(bechurl).then(function(response2){
-  //     console.log(response2);
-  //     for(var i=0; i<response2.length; i++){
-  //       console.log(response2[i]["imdbid"]);
-  //     }
-
-      return response["Search"]
-  //})
-
-    //response["Search"][0].rating = 0 //except in a loop to apply to each object in the array
-  });
+  return $.getJSON(bechurl).then(function(response){
 
 
+    return $.getJSON(url).then(function(response2){
 
+      for(var i = 0; i < response.length; i++){  //loop the the bech responses
 
+        for(var j = 0; j < response2["Search"].length; j++){ //loop thru the omdb responses
 
+          if("tt" + response[i]["imdbid"] === response2["Search"][j]["imdbID"]){ //check for when the ids are equal
+            console.log("match: " + response[i]["imdbid"] + " equals " + response2["Search"][j]["imdbID"]);
+            response[i].Poster = response2["Search"][j].Poster  //give the poster url to the bechdel obj
+          }
+
+        }
+      }
+      console.log("Final return: ", response);
+      return response; //return the original bech responses after we add a poster property to it
+
+    })
+  })
+
+  
 }
