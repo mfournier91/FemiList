@@ -16,7 +16,7 @@ body {
  #movieWrap {
    background-color: rgba(249, 252, 252, 0.53);
    border-radius: 5px;
-   padding: 1px 15px 1px 25px;
+   padding: 1px 15px 20px 25px;
    width: 400px;
    min-height: 300px;
    margin: 1em 4em;
@@ -28,10 +28,12 @@ body {
  h2 {
    font-size: 1.4em;
  }
- h3 {
+#movieWrap  h3 {
    color: rgba(235, 39, 144, 0.9);
    font-weight: bolder;
    font-size: 1.75em;
+   clear: both;
+   margin: 0
  }
  h4 {
    font-style: italic;
@@ -39,6 +41,9 @@ body {
  }
  p {
    margin: 0.2em;
+ }
+ #femSplaining {
+   display: inline;
  }
  #pinkText {
    color: rgba(235, 39, 144, 0.9);
@@ -52,8 +57,20 @@ body {
    width: 120px;
    height: auto;
    border: 5px solid black;
-   margin: 0 15px 0 0;
+   margin: 0 15px 15px 0;
    float: left;
+ }
+ .fa-times {
+   color: red;
+   font-size: 1.75em;
+ }
+ .green {
+   color: rgb(92, 180, 28);
+   font-size: 1.75em;
+ }
+ .grey {
+   color: rgb(138, 138, 138);
+   font-size: 1.75em;
  }
  form {
    background-color: rgba(249, 252, 252, 0.53);
@@ -88,4 +105,8 @@ body {
    font-family: rockwell;
    font-weight: bolder;
    text-decoration: underline;
+ }
+
+ .fa-times {
+   color: red;
  }

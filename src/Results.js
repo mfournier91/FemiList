@@ -11,17 +11,29 @@ class Results extends Component{
         title = "The " + title.substring(0, title.length-5)
       }
 
+      if (movie.Poster === "N/A"){
+        movie.Poster = "http://i.imgur.com/ddETfiC.jpg"
+      }
       if (movie.rating === "0"){
-        movie.iconClass = "fa fa-times"
+        movie.iconClassX = "fa fa-times"
         movie.femSplain = "A rating of 0 indicates that this movie has fewer than two named women in it";
       }
       else if(movie.rating === "1") {
+        movie.iconClass1 = 'fa fa-check green'
+        movie.iconClass2 = 'fa fa-check gray'
+        movie.iconClass3 = 'fa fa-check gray'
         movie.femSplain = "A rating of 1 indicates that this movie has at least two named female characters in it"
       }
       else if(movie.rating === "2"){
+        movie.iconClass1 = 'fa fa-check green'
+        movie.iconClass2 = 'fa fa-check green'
+        movie.iconClass3 = 'fa fa-check gray'
         movie.femSplain = "A rating of 2 indicates that this movie has at least two named female characters who talk to each other"
       }
       else if(movie.rating === "3"){
+        movie.iconClass1 = 'fa fa-check green'
+        movie.iconClass2 = 'fa fa-check green'
+        movie.iconClass3 = 'fa fa-check green'
         movie.femSplain = "A rating of 3 indicates that this movie has at least two named female characters who talk to each other about something other than a man."
       }
       else {
@@ -37,8 +49,11 @@ class Results extends Component{
             <p><span id="boldP">Parental Rating</span>: {movie.Rated}</p>
             <p><span id="boldP">IMDB rating</span>: {movie.imdbRating} / 10</p>
             <p><span id="boldP">Plot</span>: {movie.Plot}</p>
-            <p>Bechdel Score: {movie.rating} / 3</p>
-            <i className={movie.iconClass} aria-hidden='true'></i>
+            <h3>Bechdel Score: {movie.rating} / 3</h3>
+            <i className={movie.iconClassX} aria-hidden='true'></i>
+            <i className={movie.iconClass1} aria-hidden='true'></i>
+            <i className={movie.iconClass2} aria-hidden='true'></i>
+            <i className={movie.iconClass3} aria-hidden='true'></i>
             <p>{movie.femSplain}</p>
           </div>
         </div>
