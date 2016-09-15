@@ -13,15 +13,32 @@ body {
    margin: 0 4em;
    width: 40%;
  }
+ #movieWrap {
+   background-color: rgba(249, 252, 252, 0.53);
+   border-radius: 5px;
+   padding: 1px 15px 1px 25px;
+   width: 400px;
+   min-height: 300px;
+   margin: 1em 4em;
+
+ }
  h1 {
    font-size: 2.2em;
  }
  h2 {
    font-size: 1.4em;
  }
+ h3 {
+   color: rgba(235, 39, 144, 0.9);
+   font-weight: bolder;
+   font-size: 1.75em;
+ }
  h4 {
    font-style: italic;
    font-size: 1.2em;
+ }
+ p {
+   margin: 0.2em;
  }
  #pinkText {
    color: rgba(235, 39, 144, 0.9);
@@ -30,6 +47,13 @@ body {
  #femLogo {
    width: 40%;
    margin: 3em 0 1em 3em;
+ }
+ #movPic {
+   width: 120px;
+   height: auto;
+   border: 5px solid black;
+   margin: 0 15px 0 0;
+   float: left;
  }
  form {
    background-color: rgba(249, 252, 252, 0.53);

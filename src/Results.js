@@ -12,20 +12,26 @@ class Results extends Component{
 
       return (
         <div key={index}>
-          <h1>{title}</h1>
-          <img src={movie.Poster} alt={title} />
-          <p> Released in {movie.year}</p>
-          <p>Bechdel Score: {movie.rating}</p>
+          <div id="movieWrap">
+            <h1>{title}</h1>
+            <img id="movPic" src={movie.Poster} alt={title} />
+            <p>Genre: {movie.Genre}</p>
+            <p>Released in {movie.year}</p>
+            <p>Parental Rating: {movie.Rated}</p>
+            <p>IMDB rating: {movie.imdbRating}</p>
+            <p>Plot: {movie.Plot}</p>
+            <p>Bechdel Score: {movie.rating}</p>
+          </div>
         </div>
-      )
-    })
+      );
+    });
 
     return (
       <div>
         {results}
       </div>
-    )
+    );
   }
 }
 
-export default Results
+export default Results;
