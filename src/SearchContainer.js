@@ -32,6 +32,13 @@ class SearchContainer extends Component {
             data[i].imdbRating = otherData.imdbRating;
             data[i].Rated = otherData.Rated;
             data[i].Plot = otherData.Plot;
+            if(data[i].rating == 0){
+              console.log("Zero");
+              data[i].isZero = true;
+            }
+            else{
+              data[i].isZero = false;
+            }
             if (complete++ >= data.length -1){
               self.setState({
                 query: '',
@@ -44,7 +51,7 @@ class SearchContainer extends Component {
       }
     })
     };
-  
+
 
   render() {
 
