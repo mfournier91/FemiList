@@ -1,6 +1,61 @@
 body {
   margin: 0 auto;
   padding: 0;
-  font-family: sans-serif;
-  max-width: 40em;
+  font-family: 'Crete Round', serif;
+  background: url(http://i.imgur.com/5ns5ZcJ.jpg) no-repeat right bottom fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
+.searchBox {
+   margin: 0 4em;
+   width: 40%;
+ }
+ h1 {
+   font-size: 2.2em;
+ }
+ h2 {
+   font-size: 1.4em;
+ }
+ h4 {
+   font-style: italic;
+   font-size: 1.2em;
+ }
+ #pinkText {
+   color: rgba(235, 39, 144, 0.9);
+   text-decoration: underline;
+ }
+ #femLogo {
+   width: 40%;
+   margin: 3em 0 1em 3em;
+ }
+ form {
+   background-color: rgba(249, 252, 252, 0.53);
+   border-radius: 5px;
+   padding: 1px 15px 15px 15px;
+   width: 400px;
+ }
+ input {
+   padding: 5px;
+   width: 16em;
+   font-size: 1em;
+   border-radius: 5px;
+   font-family: 'Crete Round', serif;
+ }
+ input:focus {
+   outline: 4px inset black;
+ }
+ button.submit {
+   margin: 0 15px;
+   padding: 7px 15px;
+   font-size: 1em;
+   background-color: black;
+   color: rgb(250, 187, 212);
+   font-family: 'Crete Round', serif;
+   text-transform: uppercase;
+ }
+ button:focus, button:active {
+   outline: none;
+ }
