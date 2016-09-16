@@ -102,10 +102,10 @@ body {
  }
 
  #boldP {
-   font-family: rockwell;
-   font-weight: bolder;
-   text-decoration: underline;
- }
+  font-family: 'Roboto Slab', serif;
+  font-weight: bolder;
+  text-decoration: underline;
+}
 
  .fa-times {
    color: red;
