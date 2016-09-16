@@ -22,7 +22,16 @@ class SearchContainer extends Component {
   onSubmitQuery(evt){
     var self = this;
     evt.preventDefault();
-    calls.queryOmdb(this.state.query).then( data => {
+    calls.queryFirst(this.state.query).then( data => {
+      if (data.length === 0 ) {
+        data[0] = {"errMsg" : "No movie found with that title"}
+        self.setState({
+        query: '',
+        movies: data,
+        hasSearched: true
+      });
+      }
+      else {
       var complete = 0;
       for(var i = 0; i < data.length; i++){
         (function(i){
@@ -49,6 +58,7 @@ class SearchContainer extends Component {
           });
         })(i);
       }
+    }
     })
     };
 

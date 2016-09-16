@@ -39,6 +39,8 @@ class Results extends Component{
       else {
         movie.femSplain = "";
       }
+
+      if (!movie.errMsg){
       return (
         <div key={index}>
           <div id="movieWrap">
@@ -58,6 +60,17 @@ class Results extends Component{
           </div>
         </div>
       );
+    } else {
+      return (
+        <div key={index}>
+          <div id="movieWrap">
+            <h2>{movie.errMsg}</h2>
+            <p>This site pulls in data from the Bechdel Test API. If you think a movie should be rated that is not yet in the database, contribute to the API <a id="hereLink" href="http://bechdeltest.com/add/">here</a></p>
+            </div>
+          </div>
+      )
+
+    }
 
     });
 

@@ -1,9 +1,8 @@
 import $ from 'jquery'
 
 var calls = {};
-calls.queryOmdb = function(query) {
+calls.queryFirst = function(query) {
   var term = query.replace(/\s/, "+"); //replace white space characters with a "+"
-  var url = "https://omdbapi.com?i=";
   var bechurl = "https://cors-anywhere.herokuapp.com/http://bechdeltest.com/api/v1/getMoviesByTitle?title=" + term;
   return $.getJSON(bechurl).then(function(response){
     return response;
