@@ -2,14 +2,15 @@
   "name": "react-omdb",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://myusername.github.io/imdb-bechdel-rater",
+  "homepage": "http://mfournier91.github.io/FemiList",
   "devDependencies": {
     "react-scripts": "0.4.1"
   },
   "dependencies": {
     "jquery": "^3.1.0",
     "react": "^15.3.1",
-    "react-dom": "^15.3.1"
+    "react-dom": "^15.3.1",
+    "react-router": "^2.8.1"
   },
   "scripts": {
     "start": "react-scripts start",

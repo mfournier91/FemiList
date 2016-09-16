@@ -28,6 +28,10 @@ body {
  h2 {
    font-size: 1.4em;
  }
+ .BechdelBox {
+   margin: 0 4em;
+   width: 425px;
+ }
 #movieWrap  h3 {
    color: rgba(235, 39, 144, 0.9);
    font-weight: bolder;
@@ -109,4 +113,11 @@ body {
 
  .fa-times {
    color: red;
+ }
+
+ #parGap {
+   margin: 20px 0;
+ }
+ #pinkSteps {
+   color: rgb(254, 60, 170);
  }

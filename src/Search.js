@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Router, Link} from 'react-router';
 
 class Search extends Component {
 
@@ -11,7 +12,11 @@ class Search extends Component {
 
 
       <form onSubmit={(evt) => handleSubmitQuery(evt)}>
-        <h2>Does your movie pass the <span id="pinkText">Bechdel Test?</span></h2>
+        <h2>Does your movie pass the<span> </span> 
+          <Link to="/FemiList/bechdel">
+            <span id="pinkText"> Bechdel Test?</span>
+          </Link>
+        </h2>
         <input
         onChange={(evt) => handleSearchInput(evt)}
         value={query}
