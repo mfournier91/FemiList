@@ -1,6 +1,6 @@
 ## The FemiList
 
-If you are someone who wants to Netflix and chill but also challenge the patriarchy at the same time, then the FemiList is for you. This project is inspired by my interest in media representations of gender (and my inclination to share that interest with anyone willing to listen). The app is a collaborative effort, made with fellow General Assembly grad Aubrey Northam (https://github.com/aubreynortham).
+If you are someone who wants to Netflix and chill but also challenge the patriarchy at the same time, then the FemiList is for you. This project is inspired by my interest in media representations of gender (and my inclination to share that interest with anyone willing to listen). The app is a collaborative effort, made with fellow General Assembly grad and best friend Aubrey Northam (https://github.com/aubreynortham).
 
 The FemiList allows users to search by movie title to see general information about a film in addition to its Bechdel rating, which rates a film based on female character development. Two separate third-party APIs are used to gather this data, the documentation for those can be found here:
 
