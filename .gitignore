@@ -16,3 +16,4 @@ npm-debug.log
 
 #api key
 src/config/secret.js
+.env
