@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import secret from './config/secret'
 
 var calls = {};
 calls.queryFirst = function(query) {
@@ -12,7 +13,7 @@ calls.queryFirst = function(query) {
 calls.queryOther = function(id) {
   var url = "https://omdbapi.com?i="
   var bechId = "tt" + id; //get individual id
-  return $.getJSON(url + bechId).then(function(res){
+  return $.getJSON(url + bechId + "&apikey=" + secret["omdbApi"]).then(function(res){
     return res
  });
 };
