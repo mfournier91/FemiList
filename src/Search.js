@@ -12,8 +12,8 @@ class Search extends Component {
 
 
       <form onSubmit={(evt) => handleSubmitQuery(evt)}>
-        <h2>Does your movie pass the<span> </span> 
-          <Link to="/FemiList/bechdel">
+        <h2>Does your movie pass the<span> </span>
+          <Link to="/bechdel">
             <span id="pinkText"> Bechdel Test?</span>
           </Link>
         </h2>

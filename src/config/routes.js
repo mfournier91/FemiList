@@ -6,9 +6,9 @@ import Bechdel from '../Bechdel';
 
 var routes = (
   <Router history={browserHistory}>
-    <Route path='/FemiList' component={Main} >
+    <Route path='/' component={Main} >
       <IndexRoute component={Home} />
-      <Route path='/FemiList/bechdel' component={Bechdel} />
+      <Route path='/bechdel' component={Bechdel} />
     </Route>
   </Router>
 );
