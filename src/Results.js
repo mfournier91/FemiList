@@ -12,7 +12,7 @@ class Results extends Component{
       }
 
       if (movie.Poster === "N/A"){
-        movie.Poster = "http://i.imgur.com/ddETfiC.jpg"
+        movie.Poster = require('./public/noPoster.jpg')
       }
       if (movie.rating === "0"){
         movie.iconClassX = "fa fa-times"

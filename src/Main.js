@@ -4,7 +4,7 @@ class Main extends Component {
   render() {
     return(
     <div>
-    <a href="/FemiList"><img id="femLogo" src="http://i.imgur.com/Pbfm6sX.png" alt="FemiList logo" /></a>
+    <a href="/"><img id="femLogo" src={require('./public/flLogo.png')} alt="FemiList logo" /></a>
     {this.props.children}
     </div>
   );
