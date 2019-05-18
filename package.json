@@ -2,7 +2,7 @@
   "name": "react-omdb",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://mfournier91.github.io/FemiList",
+  "homepage": "https://femilist.marcfournier.dev",
   "devDependencies": {
     "react-scripts": "0.4.1"
   },
